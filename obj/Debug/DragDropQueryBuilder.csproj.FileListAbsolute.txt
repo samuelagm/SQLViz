@@ -1,0 +1,10 @@
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\bin\Debug\DragDropQueryBuilder.exe.config
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\bin\Debug\DragDropQueryBuilder.exe
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\bin\Debug\DragDropQueryBuilder.pdb
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.csprojResolveAssemblyReference.cache
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.Form1.resources
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.Properties.Resources.resources
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.csproj.GenerateResource.Cache
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.csproj.CoreCompileInputs.cache
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.exe
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Debug\DragDropQueryBuilder.pdb
