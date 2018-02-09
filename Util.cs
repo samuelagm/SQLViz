@@ -39,7 +39,7 @@ namespace DragDropQueryBuilder
 
         public static bool isTable(String field)
         {
-            if (field == "student" || field == "author" || field == "employee")
+            if (field == "student" || field == "Courses" || field == "Lecturer")
             {
                 return true;
             }

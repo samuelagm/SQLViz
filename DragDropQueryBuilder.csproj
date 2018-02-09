@@ -98,5 +98,29 @@
   <ItemGroup>
     <None Include="Resources\student.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greather_than.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\course_ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\course_name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Courses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\less_than.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lecturer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equal_to.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equal_symbol.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

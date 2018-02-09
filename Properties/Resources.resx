@@ -151,4 +151,25 @@
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Courses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Courses.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="course_ID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\course_ID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="course_name" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\course_name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Equal_symbol_svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Equal_symbol.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greather_than" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greather_than.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lecturer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lecturer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="less_than" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\less_than.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

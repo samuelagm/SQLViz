@@ -15,9 +15,10 @@ namespace DragDropQueryBuilder
     public partial class Form1 : Form
     {
 
-        private String[] fieldNames = { "everything", "id", "name", "gender", "age", "address" };
-        private String[] tableNames = { "student", "employee", "author" };
-        private String[] operationNames = { "select", "delete" };
+        private String[] fieldNames = { "everything", "id", "name", "gender", "age", "address"};
+        private String[] tableNames = { "student", "Courses", "Lecturer" };
+        private String[] operationNames = { "select" };
+        private String relationOperator = "=";
 
         private String[] selectedFields = { };
 
@@ -55,7 +56,7 @@ namespace DragDropQueryBuilder
             this.flowLayoutPanel1.Controls.AddRange(fieldImages.ToArray());
             this.tableLayoutPanel.Controls.AddRange(tableImages.ToArray());
             this.opLayoutPanel.Controls.AddRange(operationImages.ToArray());
-            this.operatorComboBox.SelectedIndex = 0;
+           // this.operatorComboBox.SelectedIndex = 0;
 
         }
 
@@ -147,17 +148,17 @@ namespace DragDropQueryBuilder
         private void Form1_Load(object sender, EventArgs e)
         {
             initListView();
-            logicComboBox.SelectedIndex = 0;
-            logicComboBox.Visible = false;
+            //logicComboBox.SelectedIndex = 0;
+            //logicComboBox.Visible = false;
         }
 
         private void initListView()
         {
-            listView1.View = View.Details;
-            listView1.Columns.Add("Field Name");
-            listView1.Columns.Add("Relation");
-            listView1.Columns.Add("Input");
-            listView1.FullRowSelect = true;
+            //listView1.View = View.Details;
+            //listView1.Columns.Add("Field Name");
+            //listView1.Columns.Add("Relation");
+            //listView1.Columns.Add("Input");
+            //listView1.FullRowSelect = true;
         }
 
         private void flowLayoutPanel1_DragDrop(object sender, DragEventArgs e)
@@ -189,11 +190,11 @@ namespace DragDropQueryBuilder
 
         private void initSelectedFieldComboBox()
         {
-            selectedFieldComboBox.Items.Clear();
+            //selectedFieldComboBox.Items.Clear();
             foreach (var item in fieldNames)
             {
                 if (item == "everything") continue;
-                selectedFieldComboBox.Items.Add(item);
+                //selectedFieldComboBox.Items.Add(item);
             }
         }
 
@@ -201,20 +202,20 @@ namespace DragDropQueryBuilder
         {
             try
             {
-                string selectedField = selectedFieldComboBox.Items[selectedFieldComboBox.SelectedIndex].ToString();
-                string operatorField = operatorComboBox.Items[operatorComboBox.SelectedIndex].ToString();
-                string conditionField = conditionTextBox.Text;
+                //string selectedField = selectedFieldComboBox.Items[selectedFieldComboBox.SelectedIndex].ToString();
+                //string operatorField = operatorComboBox.Items[operatorComboBox.SelectedIndex].ToString();
+                //string conditionField = conditionTextBox.Text;
                 //listBox1.Items.Add($"{selectedField} {operatorField} {conditionField}");
 
-                string[] items = { selectedField, operatorField, conditionField };
-                ListViewItem lvItem = new ListViewItem(items);
-                lvItem.Name = selectedField;
-                lvItem.Tag = logicComboBox.SelectedItem;
-                listView1.Items.Add(lvItem);
+                ///string[] items = { selectedField, operatorField, conditionField };
+                //ListViewItem lvItem = new ListViewItem(items);
+                //lvItem.Name = selectedField;
+                //lvItem.Tag = logicComboBox.SelectedItem;
+                //listView1.Items.Add(lvItem);
 
-                logicComboBox.Visible = true;
+                //logicComboBox.Visible = true;
                 handleLogicBoxItems();
-                conditionTextBox.Text = "";
+                //conditionTextBox.Text = "";
 
                 GenerateQuery();
             }
@@ -252,24 +253,29 @@ namespace DragDropQueryBuilder
             }
 
 
-            if (listView1.Items.Count > 0)
-            {
-                whereClause = " WHERE ";
-                var lastLogicOp = "";
+            //if (listView1.Items.Count > 0)
+            //{
+            //    whereClause = " WHERE ";
+            //    var lastLogicOp = "";
 
-                foreach (var item in listView1.Items)
-                {
-                    lastLogicOp = (String)((ListViewItem)item).Tag;
-                    whereClause += $"{((ListViewItem)item).SubItems[0].Text}";
-                    whereClause += $" {((ListViewItem)item).SubItems[1].Text} ";
-                    whereClause += $"{wrapIfString(((ListViewItem)item).SubItems[2].Text)} {lastLogicOp} ";
-                }
-                if (whereClause.Length > 0)
-                {
-                    whereClause = whereClause.Substring(0, whereClause.LastIndexOf(lastLogicOp));
-                }
+            //    foreach (var item in listView1.Items)
+            //    {
+            //        lastLogicOp = (String)((ListViewItem)item).Tag;
+            //        whereClause += $"{((ListViewItem)item).SubItems[0].Text}";
+            //        whereClause += $" {((ListViewItem)item).SubItems[1].Text} ";
+            //        whereClause += $"{wrapIfString(((ListViewItem)item).SubItems[2].Text)} {lastLogicOp} ";
+            //    }
+            //    if (whereClause.Length > 0)
+            //    {
+            //        whereClause = whereClause.Substring(0, whereClause.LastIndexOf(lastLogicOp));
+            //    }
 
+            //}
+
+            if (trackBar1.Value != 0) {
+                whereClause = $" WHERE Id {relationOperator} {trackBar1.Value}";
             }
+
 
             if (operationName == "")
             {
@@ -388,16 +394,16 @@ namespace DragDropQueryBuilder
 
         private void removeConditionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var itemName = listView1.SelectedItems[0].Name;
-            listView1.Items.Remove(listView1.SelectedItems[0]);
-            if (listView1.Items.Count < 1)
-            {
-                logicComboBox.Visible = false;
-            }
-            if (!selectedFieldComboBox.Items.Contains(itemName))
-            {
-                selectedFieldComboBox.Items.Add(itemName);
-            }
+            //var itemName = listView1.SelectedItems[0].Name;
+            //listView1.Items.Remove(listView1.SelectedItems[0]);
+            //if (listView1.Items.Count < 1)
+            //{
+            //    logicComboBox.Visible = false;
+            //}
+            //if (!selectedFieldComboBox.Items.Contains(itemName))
+            //{
+            //    selectedFieldComboBox.Items.Add(itemName);
+            //}
 
             handleLogicBoxItems();
             GenerateQuery();
@@ -405,13 +411,13 @@ namespace DragDropQueryBuilder
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
-                {
-                    contextMenuStrip1.Show(Cursor.Position);
-                }
-            }
+            //if (e.Button == MouseButtons.Right)
+            //{
+            //    if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+            //    {
+            //        contextMenuStrip1.Show(Cursor.Position);
+            //    }
+            //}
         }
 
         private void logicComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -421,17 +427,40 @@ namespace DragDropQueryBuilder
 
         private void handleLogicBoxItems()
         {
-            if (logicComboBox.SelectedIndex == 0)
-            {
-                foreach (ListViewItem lv in listView1.Items)
-                {
-                    selectedFieldComboBox.Items.Remove(lv.Name);
-                }
-            }
-            else
-            {
-                initSelectedFieldComboBox();
-            }
+            //if (logicComboBox.SelectedIndex == 0)
+            //{
+            //    foreach (ListViewItem lv in listView1.Items)
+            //    {
+            //        selectedFieldComboBox.Items.Remove(lv.Name);
+            //    }
+            //}
+            //else
+            //{
+            //    initSelectedFieldComboBox();
+            //}
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            GenerateQuery();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            relationOperator = "=";
+            GenerateQuery();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            relationOperator = "<";
+            GenerateQuery();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            relationOperator = ">";
+            GenerateQuery();
         }
     }
 }
