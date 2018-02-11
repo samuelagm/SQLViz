@@ -8,3 +8,4 @@ C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDr
 C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Release\DragDropQueryBuilder.exe
 C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Release\DragDropQueryBuilder.pdb
 C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Release\DragDropQueryBuilder.csprojResolveAssemblyReference.cache
+C:\Users\samue\Documents\Visual Studio 2017\Projects\DragDropQueryBuilder\DragDropQueryBuilder\obj\Release\DragDropQueryBuilder.AboutBox2.resources

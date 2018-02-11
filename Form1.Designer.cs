@@ -41,9 +41,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.opLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -51,6 +48,11 @@
             this.removeConditionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.queryStatus = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -86,7 +89,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(38, 211);
+            this.groupBox1.Location = new System.Drawing.Point(38, 224);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(239, 216);
             this.groupBox1.TabIndex = 1;
@@ -96,7 +99,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.selectedFieldLayoutPanel);
-            this.groupBox2.Location = new System.Drawing.Point(296, 23);
+            this.groupBox2.Location = new System.Drawing.Point(296, 36);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(218, 529);
             this.groupBox2.TabIndex = 2;
@@ -107,7 +110,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel);
-            this.groupBox3.Location = new System.Drawing.Point(41, 444);
+            this.groupBox3.Location = new System.Drawing.Point(41, 457);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(236, 111);
             this.groupBox3.TabIndex = 3;
@@ -134,7 +137,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.QueryTextBox);
-            this.groupBox4.Location = new System.Drawing.Point(552, 262);
+            this.groupBox4.Location = new System.Drawing.Point(552, 275);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(575, 172);
             this.groupBox4.TabIndex = 5;
@@ -150,7 +153,7 @@
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.trackBar1);
-            this.groupBox5.Location = new System.Drawing.Point(552, 23);
+            this.groupBox5.Location = new System.Drawing.Point(552, 36);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(575, 213);
             this.groupBox5.TabIndex = 11;
@@ -194,36 +197,6 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.Equal_symbol_svg;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(134, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(49, 49);
-            this.button3.TabIndex = 14;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.less_than;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(134, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 47);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.greather_than;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(134, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 49);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(26, 34);
@@ -231,12 +204,13 @@
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar1.Size = new System.Drawing.Size(56, 150);
             this.trackBar1.TabIndex = 11;
+            this.trackBar1.TickFrequency = 10;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.opLayoutPanel);
-            this.groupBox7.Location = new System.Drawing.Point(41, 23);
+            this.groupBox7.Location = new System.Drawing.Point(41, 36);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(236, 177);
             this.groupBox7.TabIndex = 13;
@@ -273,7 +247,7 @@
             this.listBox1.ForeColor = System.Drawing.Color.Maroon;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(561, 453);
+            this.listBox1.Location = new System.Drawing.Point(561, 466);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(575, 96);
             this.listBox1.TabIndex = 14;
@@ -282,16 +256,66 @@
             // 
             this.queryStatus.AutoSize = true;
             this.queryStatus.ForeColor = System.Drawing.Color.Maroon;
-            this.queryStatus.Location = new System.Drawing.Point(558, 417);
+            this.queryStatus.Location = new System.Drawing.Point(558, 430);
             this.queryStatus.Name = "queryStatus";
             this.queryStatus.Size = new System.Drawing.Size(0, 17);
             this.queryStatus.TabIndex = 15;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1278, 28);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 24);
+            this.toolStripMenuItem1.Text = "?";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.Equal_symbol_svg;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(134, 27);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(49, 49);
+            this.button3.TabIndex = 14;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.less_than;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(134, 85);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 47);
+            this.button2.TabIndex = 13;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::DragDropQueryBuilder.Properties.Resources.greather_than;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(134, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 49);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 608);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.queryStatus);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox7);
@@ -300,6 +324,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -313,6 +338,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,6 +369,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

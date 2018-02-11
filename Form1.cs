@@ -15,11 +15,11 @@ namespace DragDropQueryBuilder
     public partial class Form1 : Form
     {
 
-        private String[] fieldNames = { "everything", "id", "name", "gender", "age", "address"};
+        private String[] fieldNames = { "everything", "id", "name", "gender", "age", "address", "course_ID", "course_name"};
         private String[] tableNames = { "student", "Courses", "Lecturer" };
         private String[] operationNames = { "select" };
         private String relationOperator = "=";
-
+        private AboutBox2 aboutBox;
         private String[] selectedFields = { };
 
         private List<PictureBox> fieldImages;
@@ -31,6 +31,9 @@ namespace DragDropQueryBuilder
             InitializeComponent();
             InitDragableControls();
             initSelectedFieldComboBox();
+            aboutBox = new AboutBox2();
+           
+
         }
 
         private void InitDragableControls()
@@ -461,6 +464,16 @@ namespace DragDropQueryBuilder
         {
             relationOperator = ">";
             GenerateQuery();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            aboutBox.Show();
         }
     }
 }
